@@ -1,0 +1,41 @@
+<div class="reddit-body">
+    <div class="container">
+        <div class="row">
+            <hr>
+            <div class="col-md-9">
+                <div class="row post" *ngFor="let post of posts">
+                    <div class="col-md-1">
+                        <app-vote-button [post]="post"></app-vote-button>
+                    </div>
+                    <div class="col-md-11">
+                        <span class="subreddit-info">
+                            <span class="subreddit-text"><a class="posturl"
+                                    routerLink="">{{post.subredditName}}</a></span>
+                            <span> . Posted by <a class="username"
+                                    routerLink="/user/{{post.ownerUsername}}">{{post.ownerUsername}}</a></span>
+                            <span> . {{post.creationDate }}</span>
+                        </span>
+                        <hr />
+                        <div class="post-title">
+                            <a href="{{post.url}}" class="post-name"> {{post.title}}</a>
+                        </div>
+                        <div>
+                            <p class="post-text">{{post.desc}}</p>
+                        </div>
+                        <hr>
+                        <span>
+                            <a class="btnCommments" role="button">
+                                <i class="fa-regular fa-comment"></i>
+                                Comments({{post.commentCount}})
+                            </a>
+                            <button class="login" (click)="goToPost(post.id)">
+                                Read Post
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</div>
