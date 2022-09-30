@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router, TitleStrategy } from '@angular/router';
 
 @Component({
-  selector: 'app-home-side-bar',
-  templateUrl: './home-side-bar.component.html',
-  styleUrls: ['./home-side-bar.component.css']
+  selector: 'app-side-bar',
+  templateUrl: './side-bar.component.html',
+  styleUrls: ['./side-bar.component.css']
 })
-export class HomeSideBarComponent implements OnInit {
+export class SideBarComponent implements OnInit {
 
   constructor(private router: Router) { }
 
@@ -18,7 +18,7 @@ export class HomeSideBarComponent implements OnInit {
   }
 
   goToCreateSubreddit() {
-    /* Can do this in an modal */
+    /* Can do this in a modal */
     this.router.navigate(['/create-subreddit'])
   }
 }

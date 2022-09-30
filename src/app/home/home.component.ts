@@ -19,6 +19,8 @@ export class HomeComponent implements OnInit {
     this.postService.getAllPosts().subscribe( response => {
       console.log(response);
       this.posts = response.body!!
+    }, error => {
+      console.log(error);
     })
   }
 

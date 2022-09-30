@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Post } from '../../shared/post/post.model';
+import { Post } from '../post/post.model';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
 
 @Component({

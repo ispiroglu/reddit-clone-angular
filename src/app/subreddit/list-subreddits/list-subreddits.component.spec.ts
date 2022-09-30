@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SideBarComponent } from './side-bar.component';
+import { ListSubredditsComponent } from './list-subreddits.component';
 
-describe('SideBarComponent', () => {
-  let component: SideBarComponent;
-  let fixture: ComponentFixture<SideBarComponent>;
+describe('ListSubredditsComponent', () => {
+  let component: ListSubredditsComponent;
+  let fixture: ComponentFixture<ListSubredditsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SideBarComponent ]
+      declarations: [ ListSubredditsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SideBarComponent);
+    fixture = TestBed.createComponent(ListSubredditsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

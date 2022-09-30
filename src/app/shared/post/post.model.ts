@@ -1,9 +1,8 @@
 export interface Post {
-  id: number;
   title: string;
   url: string;
   desc: string;
-  voteCount: number;
+  voteAverage: number;
   ownerUsername: string;
   subredditName: string;
   commentCount: number;

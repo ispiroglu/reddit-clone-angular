@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BaseHttpService } from '../base-http/BaseHttpService';
+import { BaseHttpService } from '../base-http/base-http.service';
 import { LOCALHOST_POST } from './post.constants';
 import { Post } from './post.model';
 import { CreatePostPayload } from '../../post/create-post/create-post.payload';
@@ -22,18 +22,20 @@ export class PostService extends BaseHttpService {
   */
 
   getAllPosts() {
+    console.log('ASDASD');
+
     return this.httpGet<Array<Post>>(LOCALHOST_POST);
   }
 
   createPost(createPostPayload: CreatePostPayload) {
-    return this.httpPost(LOCALHOST_POST, createPostPayload);
+    return this.httpPost<any>(LOCALHOST_POST, createPostPayload); // Should get URI of created post
   }
 
   getPost(postTitle: string, subreddit: string) {
-    return this.httpGet(LOCALHOST_POST + `/${subreddit}/${postTitle}`);
+    return this.httpGet<Post>(LOCALHOST_POST + `/${subreddit}/${postTitle}`);
   }
 
   getAllPostsByUser(username: string) {
-    return this.httpGet(LOCALHOST_POST + `/${username}`);
+    return this.httpGet<Post[]>(LOCALHOST_POST + `/${username}`);
   }
 }

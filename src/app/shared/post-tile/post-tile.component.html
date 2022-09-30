@@ -1,4 +1,4 @@
-<div class="reddit-body">
+<div class="reddit-body ">
     <div class="container">
         <div class="row">
             <hr />
@@ -20,7 +20,7 @@
                             <a href="{{post.url}}" class="post-name"> {{post.title}}</a>
                         </div>
                         <div>
-                            <p class="post-text">{{post.desc}}</p>
+                            <p class="post-text" [innerHtml]="post.desc"></p>
                         </div>
                         <hr>
                         <span>
