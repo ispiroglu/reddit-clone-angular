@@ -1,9 +1,9 @@
 <div class="reddit-body">
     <div class="container">
         <div class="row">
-            <hr>
-            <div class="col-md-9">
-                <div class="row post" *ngFor="let post of posts">
+            <hr />
+            <div class="col-md-12   ">
+                <div class="row post col-md-11" *ngFor="let post of posts">
                     <div class="col-md-1">
                         <app-vote-button [post]="post"></app-vote-button>
                     </div>
@@ -25,10 +25,10 @@
                         <hr>
                         <span>
                             <a class="btnCommments" role="button">
-                                <i class="fa-regular fa-comment"></i>
+                                <fa-icon [icon]="faComments"></fa-icon>
                                 Comments({{post.commentCount}})
                             </a>
-                            <button class="login" (click)="goToPost(post.id)">
+                            <button class="login" (click)="goToPost(post.title)">
                                 Read Post
                             </button>
                         </span>

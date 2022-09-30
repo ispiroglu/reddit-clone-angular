@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, TitleStrategy } from '@angular/router';
 
 @Component({
   selector: 'app-home-side-bar',
@@ -7,16 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeSideBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   goToCreatePost() {
-
+    this.router.navigate(['/create-post'])
   }
 
   goToCreateSubreddit() {
-    
+    /* Can do this in an modal */
+    this.router.navigate(['/create-subreddit'])
   }
 }
