@@ -17,6 +17,7 @@ import { CreateSubredditComponent } from './subreddit/create-subreddit/create-su
 import { ListSubredditsComponent } from './subreddit/list-subreddits/list-subreddits.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { EditorModule } from '@tinymce/tinymce-angular';
+import { PostViewerComponent } from './post/post-viewer/post-viewer.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     HomeComponent,
     CreateSubredditComponent,
     ListSubredditsComponent,
+    PostViewerComponent,
   ],
   imports: [
     BrowserModule,
