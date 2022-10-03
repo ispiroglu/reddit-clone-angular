@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Post } from '../post/post.model';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-post-tile',
@@ -12,11 +13,13 @@ export class PostTileComponent implements OnInit {
 
   faComments = faComment
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
-  goToPost(id: string) {
+  goToPost(subredditName: string, title: string) {
     console.log('clickedGoToPost');
+    
+    this.router.navigateByUrl(`/r/${subredditName}/${title}`)
   }
 }

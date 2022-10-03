@@ -28,7 +28,7 @@
                                 <fa-icon [icon]="faComments"></fa-icon>
                                 Comments({{post.commentCount}})
                             </a>
-                            <button class="login" (click)="goToPost(post.title)">
+                            <button class="login" (click)="goToPost(post.subredditName, post.title)">
                                 Read Post
                             </button>
                         </span>

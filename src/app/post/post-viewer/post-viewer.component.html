@@ -1,1 +1,34 @@
-<p>post-viewer works!</p>
+<div class="container">
+    <div class="row">
+        <hr />
+        <div class="col-md-9">
+            <div class="row post">
+                <div class="col-md-1">
+                    <app-vote-button [post]="post"></app-vote-button>
+                </div>
+                <div class="col-md-11">
+                    <span>
+                        <span class="subreddit-text"><a class="post-url" href="">{{post.subredditName}}</a></span>
+                        <span> . Posted
+                            <span> {{post.creationDate}} </span>
+                            by
+
+                            <!-- should get this to a function -->
+                            <a *ngIf="post.ownerUsername=== null" class="username" href="">Anonymous</a>
+                            <a *ngIf="post.ownerUsername!= null" class="username" href="">{{post.ownerUsername}}</a>
+                        </span>
+                    </span>
+                    <hr />
+                    <a routerLink="post.url" class="post-title">{{post.title}}</a>
+                    <div>
+                        <p class="post-text" [innerHtml]="post.desc"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <app-side-bar></app-side-bar>
+            <app-home-subreddit-side-bar></app-home-subreddit-side-bar>
+        </div>
+    </div>
+</div>
